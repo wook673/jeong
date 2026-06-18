@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이정 耳丁 鄭命世 · 書藝</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f4efe4;
+      --bg-card:   #fbf9f3;
+      --bg-dark:   #241f18;
+      --ink:       #241f18;
+      --ink-mid:   #3f382d;
+      --ink-soft:  #5c5446;
+      --ink-muted: #6f6655;
+      --ink-faint: #8a8071;
+      --ink-pale:  #9a917f;
+      --border:    #ddd5c4;
+      --border-card: #e7e0d0;
+      --accent:    #b0392f;
+      --accent-warm: #e7653f;
+      --myeongjo: 'Nanum Myeongjo', 'Noto Serif KR', serif;
+      --serif:     'Noto Serif KR', 'Nanum Myeongjo', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--serif);
+      background: #ece6da;
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    ::selection { background: var(--accent); color: #fff; }
+
+    /* ── PAGE WRAPPER ── */
+    .page { background: var(--bg); min-height: 100vh; }
+
+    /* ── HEADER ── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244,239,228,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      border: 2px solid var(--accent);
+      border-radius: 4px;
+      color: var(--accent);
+      font-family: var(--myeongjo);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      line-height: 1.05;
+      letter-spacing: 1px;
+    }
+    .logo-name {
+      font-family: var(--myeongjo);
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+    .logo-sub {
+      font-size: 12px;
+      color: var(--ink-faint);
+      letter-spacing: 3px;
+      margin-top: 3px;
+    }
+    .nav {
+      display: flex;
+      gap: 34px;
+      font-size: 15px;
+      color: var(--ink-soft);
+      letter-spacing: 1px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: var(--ink); }
+    .nav a.active {
+      color: var(--accent);
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 40px 40px;
+    }
+    .hero-inner {
+      display: flex;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-artwork {
+      flex: none;
+      width: 340px;
+    }
+    .artwork-frame {
+      background: var(--bg-card);
+      padding: 18px;
+      box-shadow: 0 22px 50px -18px rgba(60,40,15,0.45);
+      border: 1px solid var(--border-card);
+    }
+    .artwork-frame img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background: #efe9da;
+    }
+    .hero-text { flex: 1; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 4px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero-title {
+      font-family: var(--myeongjo);
+      font-size: 74px;
+      font-weight: 800;
+      line-height: 1.02;
+      margin-top: 16px;
+      letter-spacing: 4px;
+    }
+    .hero-read {
+      font-size: 20px;
+      color: var(--ink-muted);
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+    .tags {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      border: 1px solid #cfc6b3;
+      border-radius: 40px;
+      padding: 5px 15px;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+    .hero-desc {
+      margin-top: 26px;
+      font-size: 16px;
+      line-height: 1.95;
+      color: var(--ink-mid);
+      max-width: 520px;
+    }
+    .btn-detail {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      background: var(--ink);
+      color: var(--bg);
+      padding: 13px 26px;
+      border-radius: 40px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: var(--serif);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+    }
+    .btn-detail:hover {
+      background: #3a3328;
+      transform: translateY(-1px);
+    }
+    .btn-detail .arrow { font-size: 17px; }
+
+    /* ── WORKS ── */
+    .works-header {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 48px 40px 30px;
+    }
+    .works-title-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 34px;
+    }
+    .works-title {
+      font-family: var(--myeongjo);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    .works-title span { color: var(--accent); }
+    .works-sub {
+      font-size: 14px;
+      color: var(--ink-faint);
+      letter-spacing: 1px;
+    }
+    .works-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 8px 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+    .work-card { cursor: pointer; }
+    .work-card:hover .work-frame {
+      box-shadow: 0 20px 44px -16px rgba(60,40,15,0.65);
+      transform: translateY(-2px);
+    }
+    .work-frame {
+      background: var(--bg-card);
+      padding: 14px;
+      box-shadow: 0 14px 34px -20px rgba(60,40,15,0.5);
+      border: 1px solid var(--border-card);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .work-frame img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background: #efe9da;
+    }
+    .work-info { margin-top: 16px; }
+    .work-source {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 2px;
+    }
+    .work-title {
+      font-family: var(--myeongjo);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-top: 4px;
+    }
+    .work-read {
+      font-size: 15px;
+      color: var(--ink-muted);
+      margin-top: 2px;
+    }
+    .work-meta {
+      font-size: 13px;
+      color: var(--ink-pale);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── ARTIST ── */
+    .artist {
+      background: var(--bg-dark);
+      color: #efe9da;
+    }
+    .artist-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: flex;
+      gap: 70px;
+      align-items: center;
+    }
+    .artist-mark {
+      flex: none;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #c9462f;
+      border-radius: 6px;
+      color: var(--accent-warm);
+      font-family: var(--myeongjo);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .artist-info { flex: 1; }
+    .artist-ho {
+      font-size: 13px;
+      letter-spacing: 5px;
+      color: #c79a6f;
+    }
+    .artist-name {
+      font-family: var(--myeongjo);
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-top: 10px;
+      line-height: 1.1;
+    }
+    .artist-name-hanja {
+      color: #9a8c75;
+      font-weight: 400;
+      font-size: 34px;
+    }
+    .artist-role {
+      font-size: 16px;
+      color: #b8ac97;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+    .artist-bio {
+      margin-top: 22px;
+      font-size: 16px;
+      line-height: 1.95;
+      color: #d7cdb9;
+      max-width: 640px;
+    }
+    .artist-stats {
+      margin-top: 28px;
+      display: flex;
+      gap: 42px;
+    }
+    .stat-val {
+      font-family: var(--myeongjo);
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--accent-warm);
+    }
+    .stat-lbl {
+      font-size: 13px;
+      color: #9a8c75;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--ink-faint);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-nav a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--ink); }
+
+    /* ── DETAIL OVERLAY ── */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(36,31,24,0.72);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .overlay.open { display: flex; }
+    .overlay-panel {
+      background: var(--bg);
+      max-width: 920px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 4px;
+      display: flex;
+      gap: 0;
+      position: relative;
+    }
+    .overlay-img {
+      flex: none;
+      width: 380px;
+      background: var(--bg-card);
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .overlay-img img {
+      width: 100%;
+      object-fit: contain;
+      max-height: 560px;
+      display: block;
+    }
+    .overlay-body {
+      flex: 1;
+      padding: 48px 40px;
+      overflow-y: auto;
+    }
+    .overlay-eyebrow {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 4px;
+    }
+    .overlay-title {
+      font-family: var(--myeongjo);
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      line-height: 1.02;
+      margin-top: 12px;
+    }
+    .overlay-read {
+      font-size: 18px;
+      color: var(--ink-muted);
+      margin-top: 6px;
+    }
+    .overlay-tags { margin-top: 16px; }
+    .overlay-section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .overlay-section-lbl {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+    .overlay-section p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--ink-mid);
+    }
+    .overlay-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--ink-soft);
+      transition: background 0.2s;
+    }
+    .overlay-close:hover { background: var(--border); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .header-inner { padding: 16px 24px; }
+      .nav { gap: 20px; font-size: 14px; }
+      .hero { padding: 48px 24px 32px; }
+      .hero-inner { flex-direction: column; gap: 36px; }
+      .hero-artwork { width: 100%; max-width: 340px; margin: 0 auto; }
+      .hero-artwork .artwork-frame img { height: 420px; }
+      .hero-title { font-size: 52px; }
+      .works-header { padding: 32px 24px 20px; }
+      .works-grid {
+        padding: 8px 24px 60px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .artist-inner { flex-direction: column; gap: 36px; padding: 60px 24px; }
+      .artist-name { font-size: 40px; }
+      .artist-name-hanja { font-size: 26px; }
+      .footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .overlay-panel { flex-direction: column; max-height: 95vh; }
+      .overlay-img { width: 100%; padding: 16px; }
+      .overlay-img img { max-height: 280px; }
+      .overlay-body { padding: 28px 24px; }
+      .overlay-title { font-size: 36px; }
+    }
+    @media (max-width: 600px) {
+      .logo-name { font-size: 17px; }
+      .nav { gap: 14px; font-size: 13px; }
+      .hero-title { font-size: 40px; }
+      .works-grid { grid-template-columns: 1fr; }
+      .artist-stats { gap: 24px; }
+    }
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-mark">耳丁</div>
+        <div>
+          <div class="logo-name">이정 鄭命世</div>
+          <div class="logo-sub">CALLIGRAPHY · 書藝</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#works" class="active">작품</a>
+        <a href="#artist">작가</a>
+        <a href="#exhibition">전시</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="works">
+    <div class="hero-inner">
+      <div class="hero-artwork">
+        <div class="artwork-frame">
+          <img src="project/images/w1.jpg" alt="乍晴乍雨">
+        </div>
+      </div>
+      <div class="hero-text">
+        <div class="eyebrow">대표작 · 金時習 詩</div>
+        <h1 class="hero-title">乍晴乍雨</h1>
+        <div class="hero-read">사청사우 · 잠깐 개었다 다시 비 내리니</div>
+        <div class="tags">
+          <span class="tag">해서 楷書</span>
+          <span class="tag">2025</span>
+          <span class="tag">70 × 200 cm</span>
+        </div>
+        <p class="hero-desc">
+          개었다 비 오고 비 오다 다시 개니, 하늘의 도리도 이러하거늘 하물며 세상 인정이랴. 나를 높이다가 어느새 헐뜯고, 이름을 피하다 도리어 이름을 구한다. 세상 사람에게 이르노니 — 기쁨 얻을 곳, 평생 따로 없음을.
+        </p>
+        <button class="btn-detail" onclick="openDetail('hero')">
+          작품 자세히 보기 <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS GRID -->
+  <div class="works-header">
+    <div class="works-title-row">
+      <div class="works-title">작품 <span>作品</span></div>
+      <div class="works-sub">제8회 추사묵연회 출품작</div>
+    </div>
+  </div>
+
+  <div class="works-grid">
+    <div class="work-card" onclick="openDetail('w1')">
+      <div class="work-frame">
+        <img src="project/images/w2.jpg" alt="山徑無人">
+      </div>
+      <div class="work-info">
+        <div class="work-source">鄭磏(北窓) 詩</div>
+        <div class="work-title">山徑無人</div>
+        <div class="work-read">산경무인</div>
+        <div class="work-meta">해서 楷書 · 2026 · 50×50cm</div>
+      </div>
+    </div>
+
+    <div class="work-card" onclick="openDetail('w2')">
+      <div class="work-frame">
+        <img src="project/images/w3.jpg" alt="聞人之過失">
+      </div>
+      <div class="work-info">
+        <div class="work-source">明心寶鑑 正己篇</div>
+        <div class="work-title">聞人之過失</div>
+        <div class="work-read">문인지과실</div>
+        <div class="work-meta">해서 楷書 · 2024 · 50×50cm</div>
+      </div>
+    </div>
+
+    <div class="work-card" onclick="openDetail('w3')">
+      <div class="work-frame">
+        <img src="project/images/w4.jpg" alt="謙山寬海">
+      </div>
+      <div class="work-info">
+        <div class="work-source">居常自適</div>
+        <div class="work-title">謙山寬海</div>
+        <div class="work-read">겸산관해거상자적</div>
+        <div class="work-meta">행서 行書 · 2026 · 50×135cm</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTIST -->
+  <section class="artist" id="artist">
+    <div class="artist-inner">
+      <div class="artist-mark">耳丁</div>
+      <div class="artist-info">
+        <div class="artist-ho">호 號 · 이정(耳丁)</div>
+        <h2 class="artist-name">
+          정명세 <span class="artist-name-hanja">鄭命世</span>
+        </h2>
+        <div class="artist-role">서예가 · 추사묵연회 회장(會長) · 溫陽 鄭氏</div>
+        <p class="artist-bio">
+          해서(楷書)의 단정함과 행서(行書)의 기운을 함께 다루며, 옛 시문과 명심보감의 경구를 화선지에 옮겨 적는다. 글씨의 짜임과 여백, 먹의 농담으로 글의 뜻을 다시 짓는 것을 작업의 중심에 둔다.
+        </p>
+        <div class="artist-stats">
+          <div>
+            <div class="stat-val">楷·行</div>
+            <div class="stat-lbl">주력 서체</div>
+          </div>
+          <div>
+            <div class="stat-val">第8回</div>
+            <div class="stat-lbl">추사묵연회展</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div>이정 耳丁 鄭命世 · 書藝</div>
+    <nav class="footer-nav">
+      <a href="#works">작품</a>
+      <a href="#artist">작가</a>
+      <a href="#exhibition">전시</a>
+      <a href="#contact">연락</a>
+    </nav>
+  </footer>
+
+</div>
+
+<!-- DETAIL OVERLAY -->
+<div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
+  <div class="overlay-panel" id="overlay-panel">
+    <button class="overlay-close" onclick="closeDetail()" aria-label="닫기">✕</button>
+    <div class="overlay-img">
+      <img id="overlay-img" src="" alt="">
+    </div>
+    <div class="overlay-body">
+      <div class="overlay-eyebrow" id="overlay-source"></div>
+      <div class="overlay-title" id="overlay-title"></div>
+      <div class="overlay-read" id="overlay-read"></div>
+      <div class="overlay-tags tags" id="overlay-tags"></div>
+      <div class="overlay-section" id="overlay-desc-section">
+        <div class="overlay-section-lbl">해석 · 解釋</div>
+        <p id="overlay-desc"></p>
+      </div>
+      <div class="overlay-section">
+        <div class="overlay-section-lbl">작가 · 書者</div>
+        <p>이정(耳丁) 정명세(鄭命世) · 추사묵연회 회장</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const works = {
+    hero: {
+      img: 'project/images/w1.jpg',
+      source: '金時習 詩 · 대표작',
+      title: '乍晴乍雨',
+      read: '사청사우 · 잠깐 개었다 다시 비 내리니',
+      tags: ['해서 楷書', '2025', '70 × 200 cm', '금지 족자'],
+      desc: '개었다 비 오고 비 오다 다시 개니, 하늘의 도리도 이러하거늘 하물며 세상 인정이랴. 나를 높이다가 어느새 헐뜯고, 이름을 피하다 도리어 이름을 구한다. 세상 사람에게 이르노니 — 기쁨 얻을 곳, 평생 따로 없음을.'
+    },
+    w1: {
+      img: 'project/images/w2.jpg',
+      source: '鄭磏(北窓) 詩',
+      title: '山徑無人',
+      read: '산경무인 · 산길엔 사람 없어',
+      tags: ['해서 楷書', '2026', '50 × 50 cm', '원형 구도'],
+      desc: '조선 중기 문인 북창 정렴(鄭磏)의 시. 산길에 인적이 끊긴 고요함 속에서 자연과 하나 되는 경지를 노래한다. 원형 구도로 써 내려간 해서는 그 고요함을 형태로 담았다.'
+    },
+    w2: {
+      img: 'project/images/w3.jpg',
+      source: '明心寶鑑 正己篇',
+      title: '聞人之過失',
+      read: '문인지과실 · 남의 허물을 들으면',
+      tags: ['해서 楷書', '2024', '50 × 50 cm'],
+      desc: '明心寶鑑 正己篇의 경구. 남의 허물을 들었을 때 마음 씀씀이에 관한 가르침을 담고 있다. 단정한 해서로 한 글자 한 글자 정성을 다해 써 내린 정방형 작품.'
+    },
+    w3: {
+      img: 'project/images/w4.jpg',
+      source: '居常自適',
+      title: '謙山寬海',
+      read: '겸산관해거상자적 · 산처럼 겸손하고 바다처럼 너그럽게',
+      tags: ['행서 行書', '2026', '50 × 135 cm', '족자'],
+      desc: '謙山寬海居常自適 — 산처럼 겸손하고 바다처럼 너그럽게, 늘 스스로 만족하며 살아간다. 행서의 흘러가는 기운이 글의 뜻을 더욱 살려내는 족자 형식의 작품.'
+    }
+  };
+
+  function openDetail(id) {
+    const w = works[id];
+    if (!w) return;
+    document.getElementById('overlay-img').src = w.img;
+    document.getElementById('overlay-img').alt = w.title;
+    document.getElementById('overlay-source').textContent = w.source;
+    document.getElementById('overlay-title').textContent = w.title;
+    document.getElementById('overlay-read').textContent = w.read;
+    const tagsEl = document.getElementById('overlay-tags');
+    tagsEl.innerHTML = w.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    document.getElementById('overlay-desc').textContent = w.desc;
+    document.getElementById('overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDetail() {
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('overlay')) closeDetail();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDetail();
+  });
+
+  // Smooth active nav on scroll
+  const sections = [
+    { id: 'works', link: document.querySelector('.nav a[href="#works"]') },
+    { id: 'artist', link: document.querySelector('.nav a[href="#artist"]') },
+  ];
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const s = sections.find(s => s.id === entry.target.id);
+      if (s) s.link?.classList.toggle('active', entry.isIntersecting);
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
+</script>
+</body>
+</html>
