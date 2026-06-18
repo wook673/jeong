@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#ece6da; }
+  ::selection { background:#b0392f; color:#fff; }
+</style>
+</helmet>
+
+<div style="font-family:'Noto Serif KR',serif;background:#f4efe4;color:#241f18;min-height:100vh;">
+
+  <!-- ===================== HEADER ===================== -->
+  <div data-screen-label="작품 둘러보기" style="position:sticky;top:0;z-index:20;background:rgba(244,239,228,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #ddd5c4;">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:42px;height:42px;border:2px solid #b0392f;border-radius:4px;color:#b0392f;font-family:'Nanum Myeongjo',serif;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1.05;letter-spacing:1px;">耳丁</div>
+        <div>
+          <div style="font-family:'Nanum Myeongjo',serif;font-size:21px;font-weight:800;line-height:1;letter-spacing:1px;">이정 鄭命世</div>
+          <div style="font-size:12px;color:#8a8071;letter-spacing:3px;margin-top:3px;">CALLIGRAPHY · 書藝</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:34px;font-size:15px;color:#5c5446;letter-spacing:1px;">
+        <span style="color:#b0392f;font-weight:600;border-bottom:2px solid #b0392f;padding-bottom:3px;">작품</span>
+        <span>작가</span>
+        <span>전시</span>
+        <span>연락</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HERO / 대표작 ===================== -->
+  <div style="max-width:1180px;margin:0 auto;padding:72px 40px 40px;">
+    <div style="display:flex;gap:64px;align-items:center;">
+      <!-- artwork -->
+      <div style="flex:none;width:340px;">
+        <div style="background:#fbf9f3;padding:18px;box-shadow:0 22px 50px -18px rgba(60,40,15,0.45);border:1px solid #e7e0d0;">
+          <div style="overflow:hidden;background:#efe9da;">
+            <img src="images/w1.jpg" alt="乍晴乍雨" style="width:100%;height:520px;object-fit:cover;object-position:center top;display:block;"/>
+          </div>
+        </div>
+      </div>
+      <!-- text -->
+      <div style="flex:1;">
+        <div style="display:flex;align-items:center;gap:12px;color:#b0392f;font-size:13px;letter-spacing:4px;">
+          <span style="width:30px;height:1px;background:#b0392f;display:inline-block;"></span>대표작 · 金時習 詩
+        </div>
+        <div style="font-family:'Nanum Myeongjo',serif;font-size:74px;font-weight:800;line-height:1.02;margin-top:16px;letter-spacing:4px;">乍晴乍雨</div>
+        <div style="font-size:20px;color:#6f6655;margin-top:6px;letter-spacing:1px;">사청사우 · 잠깐 개었다 다시 비 내리니</div>
+        <div style="display:flex;gap:10px;margin-top:18px;font-size:14px;color:#5c5446;">
+          <span style="border:1px solid #cfc6b3;border-radius:40px;padding:5px 15px;">해서 楷書</span>
+          <span style="border:1px solid #cfc6b3;border-radius:40px;padding:5px 15px;">2025</span>
+          <span style="border:1px solid #cfc6b3;border-radius:40px;padding:5px 15px;">70 × 200 cm</span>
+        </div>
+        <div style="margin-top:26px;font-size:16px;line-height:1.95;color:#3f382d;max-width:520px;text-wrap:pretty;">
+          개었다 비 오고 비 오다 다시 개니, 하늘의 도리도 이러하거늘 하물며 세상 인정이랴. 나를 높이다가 어느새 헐뜯고, 이름을 피하다 도리어 이름을 구한다. 세상 사람에게 이르노니 — 기쁨 얻을 곳, 평생 따로 없음을.
+        </div>
+        <div style="margin-top:30px;display:inline-flex;align-items:center;gap:10px;background:#241f18;color:#f4efe4;padding:13px 26px;border-radius:40px;font-size:15px;letter-spacing:1px;">작품 자세히 보기 <span style="font-size:17px;">→</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== WORKS GRID ===================== -->
+  <div style="max-width:1180px;margin:0 auto;padding:48px 40px 30px;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #ddd5c4;padding-top:34px;">
+      <div style="font-family:'Nanum Myeongjo',serif;font-size:30px;font-weight:800;letter-spacing:2px;">작품 <span style="color:#b0392f;">作品</span></div>
+      <div style="font-size:14px;color:#8a8071;letter-spacing:1px;">제8회 추사묵연회 출품작</div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px;margin:0 auto;padding:8px 40px 80px;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:34px;">
+      <sc-for list="{{ works }}" as="item" hint-placeholder-count="3">
+        <div>
+          <div style="background:#fbf9f3;padding:14px;box-shadow:0 14px 34px -20px rgba(60,40,15,0.5);border:1px solid #e7e0d0;">
+            <div style="height:300px;overflow:hidden;background:#efe9da;display:flex;align-items:center;justify-content:center;">
+              <img src="{{ item.img }}" alt="{{ item.title }}" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"/>
+            </div>
+          </div>
+          <div style="margin-top:16px;">
+            <div style="font-size:12px;color:#b0392f;letter-spacing:2px;">{{ item.source }}</div>
+            <div style="font-family:'Nanum Myeongjo',serif;font-size:26px;font-weight:800;letter-spacing:2px;line-height:1.1;margin-top:4px;">{{ item.title }}</div>
+            <div style="font-size:15px;color:#6f6655;margin-top:2px;">{{ item.read }}</div>
+            <div style="font-size:13px;color:#9a917f;margin-top:10px;letter-spacing:.5px;">{{ item.style }} · {{ item.year }} · {{ item.size }}cm</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ===================== ARTIST ===================== -->
+  <div data-screen-label="작가 소개" style="background:#241f18;color:#efe9da;">
+    <div style="max-width:1180px;margin:0 auto;padding:80px 40px;display:flex;gap:70px;align-items:center;">
+      <div style="flex:none;">
+        <div style="width:120px;height:120px;border:2px solid #c9462f;border-radius:6px;color:#e7653f;font-family:'Nanum Myeongjo',serif;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:42px;letter-spacing:3px;line-height:1;">耳丁</div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:13px;letter-spacing:5px;color:#c79a6f;">호 號 · 이정(耳丁)</div>
+        <div style="font-family:'Nanum Myeongjo',serif;font-size:52px;font-weight:800;letter-spacing:3px;margin-top:10px;">정명세 <span style="color:#9a8c75;font-weight:400;font-size:34px;">鄭命世</span></div>
+        <div style="font-size:16px;color:#b8ac97;margin-top:10px;letter-spacing:1px;">서예가 · 추사묵연회 회장(會長) · 溫陽 鄭氏</div>
+        <div style="margin-top:22px;font-size:16px;line-height:1.95;color:#d7cdb9;max-width:640px;text-wrap:pretty;">
+          해서(楷書)의 단정함과 행서(行書)의 기운을 함께 다루며, 옛 시문과 명심보감의 경구를 화선지에 옮겨 적는다. 글씨의 짜임과 여백, 먹의 농담으로 글의 뜻을 다시 짓는 것을 작업의 중심에 둔다.
+        </div>
+        <div style="margin-top:28px;display:flex;gap:42px;">
+          <div><div style="font-family:'Nanum Myeongjo',serif;font-size:30px;font-weight:800;color:#e7653f;">楷·行</div><div style="font-size:13px;color:#9a8c75;margin-top:4px;letter-spacing:1px;">주력 서체</div></div>
+          <div><div style="font-family:'Nanum Myeongjo',serif;font-size:30px;font-weight:800;color:#e7653f;">第8回</div><div style="font-size:13px;color:#9a8c75;margin-top:4px;letter-spacing:1px;">추사묵연회展</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div style="max-width:1180px;margin:0 auto;padding:40px;display:flex;align-items:center;justify-content:space-between;color:#8a8071;font-size:13px;letter-spacing:1px;">
+    <div>이정 耳丁 鄭命世 · 書藝</div>
+    <div style="display:flex;gap:24px;"><span>작품</span><span>작가</span><span>전시</span><span>연락</span></div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const works = [
+      { title: '山徑無人', read: '산경무인', source: '鄭磏(北窓) 詩', style: '해서 楷書', year: '2026', size: '50×50', img: 'images/w2.jpg' },
+      { title: '聞人之過失', read: '문인지과실', source: '明心寶鑑 正己篇', style: '해서 楷書', year: '2024', size: '50×50', img: 'images/w3.jpg' },
+      { title: '謙山寬海', read: '겸산관해거상자적', source: '居常自適', style: '행서 行書', year: '2026', size: '50×135', img: 'images/w4.jpg' },
+    ];
+    return { works };
+  }
+}
+</script>
+</body>
+</html>

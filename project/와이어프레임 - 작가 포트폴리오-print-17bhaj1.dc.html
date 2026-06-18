@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0; }
+  body { padding: 0.5in; box-sizing: border-box; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; }
+</style>
+</helmet>
+
+<div style="font-family:'Gaegu',sans-serif;width:max-content;min-width:100%;min-height:100vh;box-sizing:border-box;padding:48px;background:#e7e5df;color:#2b2b2b;">
+
+  <!-- ===== TITLE / LEGEND ===== -->
+  <div style="max-width:1000px;margin-bottom:8px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:44px;height:44px;border:2.5px solid #b0392f;border-radius:3px;color:#b0392f;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;letter-spacing:1px;">耳丁</div>
+      <div>
+        <div style="font-size:30px;font-weight:700;line-height:1.1;">와이어프레임 · 작가 포트폴리오</div>
+        <div style="font-size:18px;color:#6b6b6b;line-height:1.2;">이정(耳丁) 鄭明世 · 정명세 서예 작품 — &lt;작품 둘러보기&gt; 화면 3가지 방향</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;font-size:16px;color:#777;align-items:center;">
+      <div style="display:flex;align-items:center;gap:8px;"><span style="display:inline-flex;gap:3px;width:26px;height:20px;justify-content:center;padding:3px 0;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;"><span style="width:3px;background:#cdc7ba;"></span><span style="width:3px;background:#cdc7ba;"></span></span>= 서예 작품 이미지 자리</div>
+      <div style="display:flex;align-items:center;gap:8px;"><span style="width:48px;height:9px;border-radius:5px;background:#d9d5cc;display:inline-block;"></span>= 텍스트 자리</div>
+      <div style="display:flex;align-items:center;gap:8px;"><span style="width:22px;height:16px;background:#fff7d6;border:1.5px solid #e0c84a;display:inline-block;border-radius:2px;"></span>= 설계 의도 메모</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- OPTION A — 격자 갤러리 -->
+  <!-- ============================================================ -->
+  <div style="margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+      <div style="font-size:24px;font-weight:700;color:#b0392f;">옵션 A</div>
+      <div style="font-size:24px;font-weight:700;">격자 갤러리</div>
+    </div>
+    <div style="font-size:17px;color:#777;margin-bottom:18px;max-width:680px;">작품 썸네일을 균일한 격자로 펼쳐 한눈에 많이 보여주는 가장 익숙한 방식. 서체·연도 필터로 빠르게 추리기.</div>
+
+    <div style="display:flex;gap:40px;align-items:flex-start;">
+      <!-- desktop -->
+      <div style="flex:none;width:700px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">데스크톱</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:4px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);">
+          <!-- browser chrome -->
+          <div style="display:flex;align-items:center;gap:7px;padding:8px 12px;background:#efece5;border-bottom:1.5px solid #2b2b2b;">
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="flex:1;height:18px;margin-left:10px;background:#fff;border:1.5px solid #cfcabd;border-radius:10px;"></span>
+          </div>
+          <!-- site header -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1.5px dashed #c9c4b8;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:34px;height:34px;border:2px solid #b0392f;border-radius:3px;color:#b0392f;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;">耳丁</div>
+              <div>
+                <div style="font-size:19px;font-weight:700;line-height:1;">이정 鄭明世</div>
+                <div style="font-size:13px;color:#999;">서예가 정명세 작품집</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:18px;font-size:15px;color:#6b6b6b;">
+              <span style="color:#b0392f;font-weight:700;">작품</span><span>작가소개</span><span>전시</span><span>연락</span>
+            </div>
+          </div>
+          <!-- filter row -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 22px;background:#faf9f5;border-bottom:1.5px dashed #c9c4b8;">
+            <div style="display:flex;gap:8px;">
+              <span style="padding:5px 13px;font-size:14px;border-radius:14px;background:#2b2b2b;color:#fff;">전체</span>
+              <span style="padding:5px 13px;font-size:14px;border-radius:14px;border:1.5px solid #c2bcae;color:#777;">해서</span>
+              <span style="padding:5px 13px;font-size:14px;border-radius:14px;border:1.5px solid #c2bcae;color:#777;">행서</span>
+              <span style="padding:5px 13px;font-size:14px;border-radius:14px;border:1.5px solid #c2bcae;color:#777;">예서</span>
+              <span style="padding:5px 13px;font-size:14px;border-radius:14px;border:1.5px solid #c2bcae;color:#777;">전서</span>
+            </div>
+            <span style="width:150px;height:28px;background:#fff;border:1.5px solid #c2bcae;border-radius:14px;"></span>
+          </div>
+          <!-- grid -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:22px;">
+            <sc-for list="{{ works }}" as="item" hint-placeholder-count="6">
+              <div>
+                <div style="aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:6px;justify-content:center;align-items:stretch;padding:14px 0;">
+                  <div style="width:7px;background:#cdc7ba;border-radius:2px;"></div>
+                  <div style="width:7px;background:#cdc7ba;border-radius:2px;"></div>
+                  <div style="width:7px;background:#cdc7ba;border-radius:2px;"></div>
+                  <div style="width:7px;background:#cdc7ba;border-radius:2px;"></div>
+                </div>
+                <div style="margin-top:8px;font-size:17px;font-weight:700;line-height:1.1;">{{ item.title }} <span style="font-size:13px;color:#999;font-weight:400;">{{ item.read }}</span></div>
+                <div style="font-size:13px;color:#888;margin-top:2px;">{{ item.style }} · {{ item.year }} · {{ item.size }}cm</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile -->
+      <div style="flex:none;width:240px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">모바일</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:26px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);padding:7px;">
+          <div style="border-radius:20px;overflow:hidden;border:1px solid #e3ded3;">
+            <!-- status -->
+            <div style="display:flex;justify-content:center;padding:6px 0 4px;"><span style="width:60px;height:6px;background:#cfcabd;border-radius:3px;"></span></div>
+            <!-- header -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1.5px dashed #c9c4b8;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <div style="width:24px;height:24px;border:1.5px solid #b0392f;border-radius:3px;color:#b0392f;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:9px;">耳丁</div>
+                <div style="font-size:14px;font-weight:700;">이정 작품집</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:3px;"><span style="width:18px;height:2px;background:#777;"></span><span style="width:18px;height:2px;background:#777;"></span><span style="width:18px;height:2px;background:#777;"></span></div>
+            </div>
+            <!-- chips -->
+            <div style="display:flex;gap:6px;padding:9px 14px;border-bottom:1.5px dashed #c9c4b8;overflow:hidden;">
+              <span style="padding:3px 10px;font-size:12px;border-radius:11px;background:#2b2b2b;color:#fff;">전체</span>
+              <span style="padding:3px 10px;font-size:12px;border-radius:11px;border:1.5px solid #c2bcae;color:#888;">해서</span>
+              <span style="padding:3px 10px;font-size:12px;border-radius:11px;border:1.5px solid #c2bcae;color:#888;">행서</span>
+            </div>
+            <!-- 2col grid -->
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:14px;">
+              <sc-for list="{{ works4 }}" as="item" hint-placeholder-count="4">
+                <div>
+                  <div style="aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:4px;justify-content:center;align-items:stretch;padding:10px 0;">
+                    <div style="width:5px;background:#cdc7ba;border-radius:2px;"></div>
+                    <div style="width:5px;background:#cdc7ba;border-radius:2px;"></div>
+                    <div style="width:5px;background:#cdc7ba;border-radius:2px;"></div>
+                  </div>
+                  <div style="margin-top:5px;font-size:13px;font-weight:700;line-height:1;">{{ item.title }}</div>
+                  <div style="font-size:11px;color:#888;">{{ item.style }} · {{ item.year }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- note -->
+      <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:none;width:200px;align-self:center;">
+          <div style="font-family:'Nanum Pen Script',cursive;background:#fff7d6;border:1.5px solid #e0c84a;border-radius:3px;padding:14px 16px;font-size:21px;color:#7a5d10;line-height:1.25;transform:rotate(-2deg);box-shadow:0 3px 8px rgba(0,0,0,.08);">
+            서체·연도 필터로 많은 작품을 빠르게 추려서 본다. 가장 익숙하고 안전한 구조.
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- OPTION B — 에디토리얼 (대표작 크게) -->
+  <!-- ============================================================ -->
+  <div style="margin-top:56px;">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+      <div style="font-size:24px;font-weight:700;color:#b0392f;">옵션 B</div>
+      <div style="font-size:24px;font-weight:700;">에디토리얼 · 대표작 강조</div>
+    </div>
+    <div style="font-size:17px;color:#777;margin-bottom:18px;max-width:680px;">대표작 한 점을 크게 띄우고 한글 해석을 나란히 읽게 한다. 작품을 '감상'시키는 잡지 같은 흐름.</div>
+
+    <div style="display:flex;gap:40px;align-items:flex-start;">
+      <!-- desktop -->
+      <div style="flex:none;width:700px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">데스크톱</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:4px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);">
+          <div style="display:flex;align-items:center;gap:7px;padding:8px 12px;background:#efece5;border-bottom:1.5px solid #2b2b2b;">
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+          </div>
+          <!-- centered header -->
+          <div style="text-align:center;padding:18px 22px 14px;border-bottom:1.5px dashed #c9c4b8;">
+            <div style="display:inline-flex;align-items:center;gap:10px;">
+              <div style="width:30px;height:30px;border:2px solid #b0392f;border-radius:3px;color:#b0392f;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11px;">耳丁</div>
+              <div style="font-size:22px;font-weight:700;">이정 鄭明世 서예</div>
+            </div>
+            <div style="display:flex;gap:22px;justify-content:center;margin-top:10px;font-size:15px;color:#6b6b6b;">
+              <span style="color:#b0392f;font-weight:700;">작품</span><span>작가소개</span><span>전시</span><span>연락</span>
+            </div>
+          </div>
+          <!-- featured -->
+          <div style="display:flex;gap:26px;padding:26px 22px;border-bottom:1.5px dashed #c9c4b8;">
+            <div style="flex:none;width:175px;aspect-ratio:0.5;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:8px;justify-content:center;align-items:stretch;padding:18px 0;">
+              <div style="width:9px;background:#cdc7ba;border-radius:2px;"></div>
+              <div style="width:9px;background:#cdc7ba;border-radius:2px;"></div>
+              <div style="width:9px;background:#cdc7ba;border-radius:2px;"></div>
+              <div style="width:9px;background:#cdc7ba;border-radius:2px;"></div>
+              <div style="width:9px;background:#cdc7ba;border-radius:2px;"></div>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:13px;color:#b0392f;letter-spacing:1px;">대표작</div>
+              <div style="font-size:30px;font-weight:700;line-height:1.05;margin-top:4px;">{{ featured.title }}</div>
+              <div style="font-size:16px;color:#999;">{{ featured.read }} · {{ featured.style }} · {{ featured.year }} · {{ featured.size }}cm</div>
+              <div style="margin-top:16px;font-size:13px;color:#b0392f;">한글 해석</div>
+              <div style="margin-top:6px;display:flex;flex-direction:column;gap:7px;">
+                <span style="height:9px;width:100%;background:#d9d5cc;border-radius:5px;"></span>
+                <span style="height:9px;width:96%;background:#d9d5cc;border-radius:5px;"></span>
+                <span style="height:9px;width:88%;background:#d9d5cc;border-radius:5px;"></span>
+                <span style="height:9px;width:70%;background:#d9d5cc;border-radius:5px;"></span>
+              </div>
+              <div style="margin-top:18px;display:inline-block;padding:8px 20px;background:#2b2b2b;color:#fff;border-radius:18px;font-size:15px;">자세히 보기 →</div>
+            </div>
+          </div>
+          <!-- other works strip -->
+          <div style="padding:18px 22px;">
+            <div style="font-size:15px;font-weight:700;margin-bottom:12px;color:#555;">다른 작품</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+              <sc-for list="{{ rest }}" as="item" hint-placeholder-count="4">
+                <div>
+                  <div style="aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:5px;justify-content:center;align-items:stretch;padding:11px 0;">
+                    <div style="width:6px;background:#cdc7ba;border-radius:2px;"></div>
+                    <div style="width:6px;background:#cdc7ba;border-radius:2px;"></div>
+                    <div style="width:6px;background:#cdc7ba;border-radius:2px;"></div>
+                  </div>
+                  <div style="margin-top:6px;font-size:14px;font-weight:700;line-height:1;">{{ item.title }}</div>
+                  <div style="font-size:11px;color:#888;">{{ item.style }} · {{ item.year }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile -->
+      <div style="flex:none;width:240px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">모바일</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:26px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);padding:7px;">
+          <div style="border-radius:20px;overflow:hidden;border:1px solid #e3ded3;">
+            <div style="display:flex;justify-content:center;padding:6px 0 4px;"><span style="width:60px;height:6px;background:#cfcabd;border-radius:3px;"></span></div>
+            <div style="text-align:center;padding:8px 14px;border-bottom:1.5px dashed #c9c4b8;">
+              <div style="font-size:15px;font-weight:700;">이정 鄭明世 서예</div>
+            </div>
+            <!-- featured stacked -->
+            <div style="padding:14px;border-bottom:1.5px dashed #c9c4b8;">
+              <div style="font-size:11px;color:#b0392f;letter-spacing:1px;">대표작</div>
+              <div style="aspect-ratio:0.62;margin-top:6px;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:6px;justify-content:center;align-items:stretch;padding:14px 0;">
+                <div style="width:8px;background:#cdc7ba;border-radius:2px;"></div>
+                <div style="width:8px;background:#cdc7ba;border-radius:2px;"></div>
+                <div style="width:8px;background:#cdc7ba;border-radius:2px;"></div>
+                <div style="width:8px;background:#cdc7ba;border-radius:2px;"></div>
+              </div>
+              <div style="font-size:20px;font-weight:700;margin-top:8px;line-height:1;">{{ featured.title }}</div>
+              <div style="font-size:12px;color:#888;">{{ featured.style }} · {{ featured.year }} · {{ featured.size }}cm</div>
+              <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
+                <span style="height:8px;width:100%;background:#d9d5cc;border-radius:4px;"></span>
+                <span style="height:8px;width:90%;background:#d9d5cc;border-radius:4px;"></span>
+                <span style="height:8px;width:72%;background:#d9d5cc;border-radius:4px;"></span>
+              </div>
+            </div>
+            <!-- horizontal strip -->
+            <div style="padding:12px 14px;">
+              <div style="font-size:12px;font-weight:700;color:#555;margin-bottom:8px;">다른 작품</div>
+              <div style="display:flex;gap:10px;overflow:hidden;">
+                <div style="flex:none;width:62px;aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:4px;justify-content:center;align-items:stretch;padding:9px 0;"><div style="width:5px;background:#cdc7ba;"></div><div style="width:5px;background:#cdc7ba;"></div></div>
+                <div style="flex:none;width:62px;aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:4px;justify-content:center;align-items:stretch;padding:9px 0;"><div style="width:5px;background:#cdc7ba;"></div><div style="width:5px;background:#cdc7ba;"></div></div>
+                <div style="flex:none;width:62px;aspect-ratio:0.62;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:4px;justify-content:center;align-items:stretch;padding:9px 0;"><div style="width:5px;background:#cdc7ba;"></div><div style="width:5px;background:#cdc7ba;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- note -->
+      <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:none;width:200px;align-self:center;">
+          <div style="font-family:'Nanum Pen Script',cursive;background:#fff7d6;border:1.5px solid #e0c84a;border-radius:3px;padding:14px 16px;font-size:21px;color:#7a5d10;line-height:1.25;transform:rotate(2deg);box-shadow:0 3px 8px rgba(0,0,0,.08);">
+            한 점을 크게 보여주고 한글 해석을 같이 읽힌다. 작품 수가 적어도 깊이 있어 보임.
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- OPTION C — 아카이브 인덱스 (목록·정렬) -->
+  <!-- ============================================================ -->
+  <div style="margin-top:56px;">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+      <div style="font-size:24px;font-weight:700;color:#b0392f;">옵션 C</div>
+      <div style="font-size:24px;font-weight:700;">아카이브 인덱스 · 목록형</div>
+    </div>
+    <div style="font-size:17px;color:#777;margin-bottom:18px;max-width:680px;">작품이 많아질 때 강한 방식. 좌측 필터 + 우측 정렬 가능한 표로 서체·연도·크기를 한 줄에 비교.</div>
+
+    <div style="display:flex;gap:40px;align-items:flex-start;">
+      <!-- desktop -->
+      <div style="flex:none;width:700px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">데스크톱</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:4px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);">
+          <div style="display:flex;align-items:center;gap:7px;padding:8px 12px;background:#efece5;border-bottom:1.5px solid #2b2b2b;">
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+            <span style="width:11px;height:11px;border-radius:50%;background:#cfcabd;"></span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1.5px solid #2b2b2b;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:30px;height:30px;border:2px solid #b0392f;border-radius:3px;color:#b0392f;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11px;">耳丁</div>
+              <div style="font-size:18px;font-weight:700;">이정 鄭明世 작품 아카이브</div>
+            </div>
+            <span style="width:180px;height:30px;background:#faf9f5;border:1.5px solid #c2bcae;border-radius:15px;"></span>
+          </div>
+          <!-- body: sidebar + table -->
+          <div style="display:flex;">
+            <div style="flex:none;width:170px;border-right:1.5px dashed #c9c4b8;padding:18px 16px;">
+              <div style="font-size:14px;font-weight:700;color:#b0392f;margin-bottom:8px;">서체</div>
+              <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#666;">
+                <span>☐ 해서</span><span>☐ 행서</span><span>☐ 예서</span><span>☐ 전서</span><span>☐ 초서</span>
+              </div>
+              <div style="font-size:14px;font-weight:700;color:#b0392f;margin:18px 0 8px;">연도</div>
+              <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#666;">
+                <span>☐ 2025</span><span>☐ 2024</span><span>☐ 2023</span><span>☐ 2022</span>
+              </div>
+              <div style="font-size:14px;font-weight:700;color:#b0392f;margin:18px 0 8px;">크기</div>
+              <span style="display:block;width:100%;height:8px;background:#d9d5cc;border-radius:4px;"></span>
+            </div>
+            <div style="flex:1;">
+              <!-- table header -->
+              <div style="display:grid;grid-template-columns:48px 1fr 64px 60px 78px;gap:10px;align-items:center;padding:10px 18px;background:#faf9f5;border-bottom:1.5px solid #c9c4b8;font-size:13px;font-weight:700;color:#777;">
+                <span></span><span>작품 ▾</span><span>서체</span><span>연도 ▾</span><span>크기(cm)</span>
+              </div>
+              <sc-for list="{{ works }}" as="item" hint-placeholder-count="6">
+                <div style="display:grid;grid-template-columns:48px 1fr 64px 60px 78px;gap:10px;align-items:center;padding:11px 18px;border-bottom:1.5px dashed #e0dcd2;">
+                  <div style="width:34px;height:48px;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:3px;justify-content:center;align-items:stretch;padding:6px 0;">
+                    <div style="width:4px;background:#cdc7ba;border-radius:1px;"></div>
+                    <div style="width:4px;background:#cdc7ba;border-radius:1px;"></div>
+                  </div>
+                  <div><span style="font-size:17px;font-weight:700;">{{ item.title }}</span> <span style="font-size:12px;color:#999;">{{ item.read }}</span></div>
+                  <span style="font-size:14px;color:#666;">{{ item.style }}</span>
+                  <span style="font-size:14px;color:#666;">{{ item.year }}</span>
+                  <span style="font-size:14px;color:#666;">{{ item.size }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile -->
+      <div style="flex:none;width:240px;">
+        <div style="font-size:14px;color:#999;margin-bottom:6px;">모바일</div>
+        <div style="background:#fff;border:2px solid #2b2b2b;border-radius:26px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.10);padding:7px;">
+          <div style="border-radius:20px;overflow:hidden;border:1px solid #e3ded3;">
+            <div style="display:flex;justify-content:center;padding:6px 0 4px;"><span style="width:60px;height:6px;background:#cfcabd;border-radius:3px;"></span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1.5px solid #2b2b2b;">
+              <div style="font-size:14px;font-weight:700;">작품 아카이브</div>
+              <span style="padding:3px 10px;font-size:11px;border:1.5px solid #c2bcae;border-radius:11px;color:#777;">필터 ▾</span>
+            </div>
+            <!-- list rows -->
+            <div>
+              <sc-for list="{{ works4 }}" as="item" hint-placeholder-count="4">
+                <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1.5px dashed #e0dcd2;">
+                  <div style="flex:none;width:30px;height:42px;background:#efece5;border:1.5px solid #c2bcae;border-radius:2px;display:flex;gap:3px;justify-content:center;align-items:stretch;padding:5px 0;"><div style="width:4px;background:#cdc7ba;"></div><div style="width:4px;background:#cdc7ba;"></div></div>
+                  <div style="flex:1;">
+                    <div style="font-size:15px;font-weight:700;line-height:1;">{{ item.title }} <span style="font-size:11px;color:#999;font-weight:400;">{{ item.read }}</span></div>
+                    <div style="font-size:11px;color:#888;">{{ item.style }} · {{ item.year }} · {{ item.size }}cm</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- note -->
+      <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:none;width:200px;align-self:center;">
+          <div style="font-family:'Nanum Pen Script',cursive;background:#fff7d6;border:1.5px solid #e0c84a;border-radius:3px;padding:14px 16px;font-size:21px;color:#7a5d10;line-height:1.25;transform:rotate(-1.5deg);box-shadow:0 3px 8px rgba(0,0,0,.08);">
+            정보(서체·연도·크기)를 표로 비교·정렬. 작품 수가 수십 점 이상일 때 강함.
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const showNotes = this.props.showNotes ?? true;
+    const works = [
+      { title: '樂天知命', read: '낙천지명', style: '해서', year: '2025', size: '138×70' },
+      { title: '上善若水', read: '상선약수', style: '행서', year: '2024', size: '100×50' },
+      { title: '寧靜致遠', read: '영정치원', style: '예서', year: '2024', size: '135×35' },
+      { title: '厚德載物', read: '후덕재물', style: '행서', year: '2023', size: '70×40' },
+      { title: '和氣致祥', read: '화기치상', style: '해서', year: '2023', size: '90×45' },
+      { title: '自彊不息', read: '자강불식', style: '전서', year: '2022', size: '110×55' },
+    ];
+    return {
+      showNotes,
+      works,
+      works4: works.slice(0, 4),
+      featured: works[0],
+      rest: works.slice(1, 5),
+    };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "와이어프레임 - 작가 포트폴리오";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  @page { margin: 0.5cm; }\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks, whose
+  // slides are sized to the page.
+  try {
+    if (!document.querySelector('deck-stage')) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a body padding inset only when we also zero the
+      // @page margin; computed style can't tell us (it reports screen media),
+      // so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /body\s*\{[^}]*padding/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
